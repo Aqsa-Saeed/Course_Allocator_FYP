@@ -9,9 +9,10 @@ import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.rag import setup_rag
 from app.routers import (
     allocations, audit, auth, courses, departments, faculty, instructors, me, preferences,
-    programs, ranking, sections, semesters, settings,
+    password_reset, programs, ranking, sections, semesters, settings,
 )
 
 app = FastAPI(title="Course Allocation API")
@@ -27,8 +28,11 @@ app.add_middleware(
 )
 
 for module in (auth, me, departments, programs, semesters, courses, sections, instructors,
-               preferences, faculty, audit, ranking, allocations, settings):
+               preferences, faculty, audit, ranking, allocations, settings, password_reset):
     app.include_router(module.router)
+
+# Document chat (RAG): upload course outlines / faculty feedback and ask questions about them.
+setup_rag(app)
 
 
 @app.get("/")

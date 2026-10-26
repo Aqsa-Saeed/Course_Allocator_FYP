@@ -1,0 +1,4 @@
+# Add these to your existing requirements.txt (sentence-transformers, pgvector, python-multipart are already there)
+huggingface_hub>=0.26
+pypdf>=5.0
+python-docx>=1.1

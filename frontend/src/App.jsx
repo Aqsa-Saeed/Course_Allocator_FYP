@@ -3,6 +3,7 @@ import { useAuth } from "./auth.jsx";
 import Layout from "./components/Layout.jsx";
 import { Loading } from "./components/ui.jsx";
 import Login from "./pages/Login.jsx";
+import ForgotPassword from "./pages/ForgotPassword.jsx";
 import Profile from "./pages/faculty/Profile.jsx";
 import History from "./pages/faculty/History.jsx";
 import MyPreferences from "./pages/faculty/Preferences.jsx";
@@ -16,6 +17,7 @@ import Semesters from "./pages/coordinator/Semesters.jsx";
 import AllocationsOverview from "./pages/coordinator/Allocations.jsx";
 import Settings from "./pages/coordinator/Settings.jsx";
 import AuditLog from "./pages/coordinator/AuditLog.jsx";
+import DocumentChat from "./pages/coordinator/DocumentChat.jsx";
 
 const homeFor = (user) => (user.role === "faculty" ? "/profile" : "/rankings");
 
@@ -43,6 +45,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route
         element={
           <Protected>
@@ -62,6 +65,7 @@ export default function App() {
         <Route path="/sections" element={<Protected allow={forCoordinators}><Sections /></Protected>} />
         <Route path="/instructors" element={<Protected allow={forCoordinators}><Instructors /></Protected>} />
         <Route path="/semesters" element={<Protected allow={forCoordinators}><Semesters /></Protected>} />
+        <Route path="/document-chat" element={<Protected allow={forCoordinators}><DocumentChat /></Protected>} />
         <Route path="/audit" element={<Protected allow={forDepartment}><AuditLog /></Protected>} />
       </Route>
       <Route

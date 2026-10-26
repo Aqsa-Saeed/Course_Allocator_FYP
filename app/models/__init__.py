@@ -21,6 +21,8 @@ from .preference import InstructorPreference
 from .allocation import Allocation
 from .audit_log import AuditLog
 from .ranking_settings import RankingSettings
+from .password_reset import PasswordResetCode  # noqa: F401
+
 
 __all__ = [
     "Base",

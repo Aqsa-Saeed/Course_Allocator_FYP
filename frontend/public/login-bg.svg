@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c332d"/>
+      <stop offset=".55" stop-color="#16594d"/>
+      <stop offset="1" stop-color="#2b8a76"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".82" cy=".18" r=".55">
+      <stop offset="0" stop-color="#f2c75c" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#f2c75c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a2924"/>
+      <stop offset="1" stop-color="#06201c"/>
+    </linearGradient>
+    <pattern id="grid" width="80" height="60" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V60" fill="none" stroke="#fff" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- soft rings -->
+  <g fill="none" stroke="#fff" stroke-opacity=".08">
+    <circle cx="1280" cy="170" r="120"/><circle cx="1280" cy="170" r="200"/><circle cx="1280" cy="170" r="290"/><circle cx="1280" cy="170" r="400"/>
+  </g>
+  <circle cx="1280" cy="170" r="54" fill="#f6d36f" fill-opacity=".9"/>
+
+  <!-- timetable blocks floating on the right: a nod to scheduling -->
+  <g transform="translate(900 250)">
+    <g fill="#fff" fill-opacity=".10"><rect x="0" y="0" width="150" height="46" rx="8"/><rect x="170" y="0" width="150" height="46" rx="8"/><rect x="340" y="0" width="150" height="46" rx="8"/></g>
+    <g fill="#fff" fill-opacity=".16"><rect x="0" y="66" width="150" height="46" rx="8"/><rect x="340" y="66" width="150" height="46" rx="8"/></g>
+    <rect x="170" y="66" width="150" height="46" rx="8" fill="#f2c75c" fill-opacity=".55"/>
+    <g fill="#fff" fill-opacity=".10"><rect x="0" y="132" width="150" height="46" rx="8"/><rect x="170" y="132" width="150" height="46" rx="8"/></g>
+    <rect x="340" y="132" width="150" height="46" rx="8" fill="#7fd1bd" fill-opacity=".45"/>
+    <g fill="#fff" fill-opacity=".85"><rect x="14" y="16" width="70" height="6" rx="3"/><rect x="184" y="16" width="54" height="6" rx="3"/><rect x="354" y="16" width="80" height="6" rx="3"/>
+    <rect x="14" y="82" width="60" height="6" rx="3"/><rect x="184" y="82" width="84" height="6" rx="3" fill-opacity="1"/><rect x="354" y="82" width="50" height="6" rx="3"/>
+    <rect x="14" y="148" width="76" height="6" rx="3"/><rect x="184" y="148" width="48" height="6" rx="3"/><rect x="354" y="148" width="66" height="6" rx="3" fill-opacity="1"/></g>
+    <g fill="#fff" fill-opacity=".45"><rect x="14" y="28" width="40" height="5" rx="2.5"/><rect x="184" y="28" width="60" height="5" rx="2.5"/><rect x="354" y="28" width="34" height="5" rx="2.5"/>
+    <rect x="184" y="94" width="40" height="5" rx="2.5"/><rect x="354" y="160" width="52" height="5" rx="2.5"/></g>
+  </g>
+
+  <!-- stars / dots -->
+  <g fill="#fff" fill-opacity=".5">
+    <circle cx="140" cy="110" r="2"/><circle cx="320" cy="60" r="1.6"/><circle cx="520" cy="150" r="2"/><circle cx="700" cy="80" r="1.5"/><circle cx="820" cy="190" r="2"/>
+    <circle cx="90" cy="300" r="1.6"/><circle cx="430" cy="260" r="1.8"/><circle cx="1500" cy="330" r="2"/><circle cx="1420" cy="520" r="1.6"/><circle cx="1010" cy="120" r="1.8"/>
+  </g>
+
+  <!-- campus skyline -->
+  <g>
+    <!-- far hills -->
+    <path d="M0 640 C 220 590 380 650 600 620 S 980 580 1200 625 S 1480 600 1600 630 V900 H0Z" fill="#0d3a33" fill-opacity=".8"/>
+    <!-- main hall -->
+    <g fill="#0a2d27">
+      <rect x="560" y="560" width="480" height="190"/>
+      <polygon points="540,560 800,470 1060,560"/>
+      <rect x="760" y="415" width="80" height="70"/>
+      <path d="M752 415 A48 48 0 0 1 848 415Z"/>
+      <rect x="796" y="352" width="8" height="30"/>
+      <rect x="470" y="620" width="110" height="130"/><rect x="1020" y="620" width="110" height="130"/>
+      <polygon points="460,620 525,585 590,620"/><polygon points="1010,620 1075,585 1140,620"/>
+    </g>
+    <!-- columns -->
+    <g fill="#134a41">
+      <rect x="590" y="580" width="22" height="170"/><rect x="650" y="580" width="22" height="170"/><rect x="710" y="580" width="22" height="170"/>
+      <rect x="868" y="580" width="22" height="170"/><rect x="928" y="580" width="22" height="170"/><rect x="988" y="580" width="22" height="170"/>
+    </g>
+    <rect x="760" y="640" width="80" height="110" rx="40" fill="#f2c75c" fill-opacity=".75"/>
+    <g fill="#f2c75c" fill-opacity=".55"><rect x="498" y="650" width="22" height="34" rx="11"/><rect x="540" y="650" width="22" height="34" rx="11"/><rect x="1038" y="650" width="22" height="34" rx="11"/><rect x="1080" y="650" width="22" height="34" rx="11"/></g>
+    <circle cx="800" cy="528" r="16" fill="#f2c75c" fill-opacity=".7"/>
+    <!-- steps -->
+    <g fill="#0f3a33"><rect x="540" y="750" width="520" height="14"/><rect x="520" y="764" width="560" height="14"/></g>
+    <!-- trees -->
+    <g fill="#0b302a">
+      <circle cx="330" cy="690" r="52"/><rect x="324" y="690" width="12" height="70"/>
+      <circle cx="410" cy="715" r="38"/><rect x="405" y="715" width="10" height="50"/>
+      <circle cx="1270" cy="690" r="52"/><rect x="1264" y="690" width="12" height="70"/>
+      <circle cx="1190" cy="715" r="38"/><rect x="1185" y="715" width="10" height="50"/>
+      <circle cx="120" cy="700" r="44"/><rect x="114" y="700" width="12" height="70"/>
+      <circle cx="1480" cy="705" r="44"/><rect x="1474" y="705" width="12" height="70"/>
+    </g>
+  </g>
+  <rect y="770" width="1600" height="130" fill="url(#ground)"/>
+</svg>
